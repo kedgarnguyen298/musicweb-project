@@ -11,5 +11,5 @@ WeTunes là một trang mạng xã hội âm nhạc dành cho mọi lứa tuổi
 ## Documents
 1. [Use Case Diagrams](https://github.com/kedgarnguyen298/musicweb-project/tree/master/Use%20Case)
 ## Others
-1. [Product Backlog & Sprint Planning](Backlog & Planning.xlsx)
+1. [Product Backlog & Sprint Planning](https://github.com/kedgarnguyen298/musicweb-project/blob/master/Backlog%20%26%20Planning.xlsx)
 2. [QnA file](QnA.xlsx)
