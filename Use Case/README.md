@@ -1,4 +1,6 @@
 # Use case
 
-## draf-usecase
-![draft use case](draft-UC.png)
+## 1. Draft Use Case
+<p align="center">
+  <img src="draft-UC.png">
+</p>
