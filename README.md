@@ -9,7 +9,7 @@ WeTunes là một trang mạng xã hội âm nhạc dành cho mọi lứa tuổi
 - Front-end framework: [Boostrap](https://getbootstrap.com/)
 - Web framework for Python: [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 ## Documents
-1. [Use Case Diagrams](https://github.com/kedgarnguyen298/musicweb-project/tree/master/Use%20Case)
+1. [Use Case Diagrams](usecase)
 ## Others
 1. [Product Backlog & Sprint Planning](https://github.com/kedgarnguyen298/musicweb-project/blob/master/Backlog%20%26%20Planning.xlsx)
 2. [QnA file](QnA.xlsx)
