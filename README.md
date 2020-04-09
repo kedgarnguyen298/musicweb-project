@@ -3,10 +3,13 @@ WeTunes là một trang mạng xã hội âm nhạc dành cho mọi lứa tuổi
 > Not iTunes, be WeTunes
 ## Authors
 - Nguyễn Quốc Khánh - 20176095
-- guyễn Thị Ngọc Anh - 20176071
+- Nguyễn Thị Ngọc Anh - 20176071
 ## Built With
 - Programming Language: [Python 3.6](https://www.python.org/)
 - Front-end framework: [Boostrap](https://getbootstrap.com/)
 - Web framework for Python: [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 ## Documents
-1. [Use Case Diagrams](https://github.com/kedgarnguyen298/musicweb-project/tree/master/Use%20Case)
+1. [Use Case Diagrams](usecase)
+## Others
+1. [Product Backlog & Sprint Planning](https://github.com/kedgarnguyen298/musicweb-project/blob/master/Backlog%20%26%20Planning.xlsx)
+2. [QnA file](QnA.xlsx)
