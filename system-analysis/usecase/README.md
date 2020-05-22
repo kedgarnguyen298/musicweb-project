@@ -19,7 +19,7 @@
 
 ### Admin
 <p align="center">
-  <img src="https://github.com/kedgarnguyen298/musicweb-project/blob/master/usecase/admin%20actor%20.jpg">
+  <img src="https://github.com/kedgarnguyen298/musicweb-project/blob/master/system-analysis/usecase/admin%20actor%20.jpg">
 </p>
 
 ## 3. Đặc tả Use case
