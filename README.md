@@ -8,6 +8,7 @@ WeTunes là một trang mạng xã hội âm nhạc dành cho mọi lứa tuổi
 - Programming Language: [Python 3.6](https://www.python.org/)
 - Front-end framework: [Boostrap](https://getbootstrap.com/)
 - Web framework for Python: [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+- Database: [MongoDB](https://www.mongodb.com/)
 ## System analysis
 1. [Use Case Diagrams](system-analysis/usecase)
 2. [Activity Diagrams](system-analysis/activity%20diagram)
