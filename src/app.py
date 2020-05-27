@@ -11,11 +11,11 @@ def login():
 def register():
     if request.methods == 'GET':
         return render_template('register.html')
-    else:
-        form = request.form
-        email = form.email
-        username = form.username
-        password = form.password
+    # else:
+    #     form = request.form
+    #     email = form.email
+    #     username = form.username
+    #     password = form.password
         
         
 
