@@ -1,6 +1,8 @@
 # WeTunes
 > A mini music social for people of all ages, all works of life
+
 > Connecting people with each other by selected melodies.
+
 > Not iTunes, be WeTunes
 ---
 ## Installation
@@ -8,13 +10,23 @@
 - Install Flask framework and required libraries:
   - `pip install Flask`
   - ```python
-  from flask import Flask
-  app = Flask(__name__)
-
-  @app.route("/")
-  def hello():
-      return "Hello, World!"
+  
+        from flask import Flask
+        app = Flask(__name__)
+        
+        @app.route("/")
+        def hello():
+          return "Hello, World!"
   ```
+- Run file "app.py" from terminal: `python app.py`
+- WWebsite will be running on: https://localhost8000.com/
+---
+## Features
+- Sign in/ Sign up
+- Listening music
+- Realtime music chart
+- Searching favourite song
+---
 ## Contributing
 > To get started...
 ### Step 1
@@ -46,5 +58,10 @@
 ## Others
 1. [Product Backlog & Sprint Planning](https://github.com/kedgarnguyen298/musicweb-project/blob/master/Backlog%20%26%20Planning.xlsx)
 2. [QnA file](QnA.xlsx)
+---
+## Roadmap
+- Make personal playlist
+- Like, share and comment
+- Update UI, UX
 ---
 ## FAQ
