@@ -54,6 +54,7 @@
 2. [Activity Diagrams](system-analysis/activity%20diagram)
 3. [Sequence Diagrams](system-analysis/sequence%20diagram)
 4. [Folder Structure](system-analysis/folder%20structure)
+5. [UI design](ui-design)
 ---
 ## Others
 1. [Product Backlog & Sprint Planning](https://github.com/kedgarnguyen298/musicweb-project/blob/master/Backlog%20%26%20Planning.xlsx)
