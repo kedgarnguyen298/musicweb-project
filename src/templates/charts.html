@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,123 +20,33 @@
       href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
       integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
       crossorigin="anonymous"
-    />
+    /> -->
+{% extends "base.html" %}
+{% block style %}
     <link rel="stylesheet" href="../static/css/charts.css">
-    <title>Charts</title>
-</head>
-<body>
-        <div class="nav">
-                <img src="../static/img/logo.png" alt="" class="logo" height="40%"> 
-                <div class="box">
-                            <i class="fas fa-search">
-                            </i>
-                            <input type="search" id="search" placeholder="Search..."/>
-                </div>
-                <div class="tv">
-                    <button class="btn1";>
-                        CHARTS
-                    </button>
-                    <button class="btn2";>
-                        SIGN IN
-                    </button>
-        
-                </div>
-        </div>
+{% endblock %}    
+{% block title %} Charts {% endblock %}
+
+{% block body %}
         <div class="time">
             <b>REALTIME</b>
         </div>
-        <div class="b">
-            <p class="stt">01</p>
-            <img src="../static/img/ava1.jpg" alt="" class="ava">
-            <div class=name>
-                <p>KILL THIS LOVE<br>Blackpink</p>
+        
+        {% set counter = 0 %}
+        {% for chart_info in list_chart_info %}
+        <a href="/play/{{chart_info.id}}" style="text-decoration: none;">
+            <div class="b">
+                    <p class="stt">{{chart_info.rank}}</p>
+                    <img src="{{chart_info.avatar}}" alt="" class="ava">
+                    <div class=name>
+                        <p><b>{{chart_info.title}}</b><br>{{chart_info.singers|join(', ')}}</p>
+                    </div>
+                    <img src="../static/img/playbutton.png" alt="" class="pb">
             </div>
-            <img src="../static/img/playbutton.png" alt="" class="pb">
-        </div>
-        <hr>
-        <div class="b">
-            <p class="stt">02</p>
-            <img src="../static/img/ava2.jpg" alt="" class="ava">
-            <div class=name>
-                <p>Let's Du Dua<br>Bich Phuong</p>
-            </div>
-            <img src="../static/img/playbutton.png" alt="" class="pb">
-        </div>
-        <hr>
-        <div class="b">
-            <p class="stt">03</p>
-            <img src="../static/img/ava3.jpg" alt="" class="ava">
-            <div class=name>
-                <p>Het thuong can nho<br>Duc Phuc</p>
-            </div>
-            <img src="../static/img/playbutton.png" alt="" class="pb">
-        </div>
-        <hr>
-        <div class="b">
-                <p class="stt">04</p>
-                <img src="../static/img/ava4.jpg" alt="" class="ava">
-                <div class=name>
-                    <p>Where is your house bae<br>AMEE</p>
-                </div>
-                <img src="../static/img/playbutton.png" alt="" class="pb">
-            </div>
-        <hr>
-        <div class="b">
-                <p class="stt">05</p>
-                <img src="../static/img/ava5.jpg" alt="" class="ava">
-                <div class=name>
-                    <p>Ke cap gap ba gia<br>Hoang Thuy Linh</p>
-                </div>
-                <img src="../static/img/playbutton.png" alt="" class="pb">
-            </div>
-        <hr>
-        <div class="b">
-                <p class="stt">06</p>
-                <img src="../static/img/ava6.jpg" alt="" class="ava">
-                <div class=name>
-                    <p>So far<br>Binz</p>
-                </div>
-                <img src="../static/img/playbutton.png" alt="" class="pb">
-            </div>
-        <hr>
-        <div class="b">
-                <p class="stt">07</p>
-                <img src="../static/img/ava7.jpg" alt="" class="ava">
-                <div class=name>
-                    <p>Bang bang bang<br>Bigbang</p>
-                </div>
-                <img src="../static/img/playbutton.png" alt="" class="pb">
-            </div>
-        <hr>
-        <div class="b">
-                <p class="stt">08</p>
-                <img src="../static/img/ava8.jpg" alt="" class="ava">
-                <div class=name>
-                    <p>Spring day<br>BTS</p>
-                </div>
-                <img src="../static/img/playbutton.png" alt="" class="pb">
-            </div>
-        <hr>
-        <div class="b">
-                <p class="stt">09</p>
-                <img src="../static/img/ava9.jpg" alt="" class="ava">
-                <div class=name>
-                    <p>Anh oi o lai<br>Chi Pu</p>
-                </div>
-                <img src="../static/img/playbutton.png" alt="" class="pb">
-            </div>
-        <hr>
-        <div class="b">
-                <p class="stt">10</p>
-                <img src="../static/img/ava10.png" alt="" class="ava">
-                <div class=name>
-                    <p>Chay ngay di<br>Son Tung</p>
-                </div>
-                <img src="../static/img/playbutton.png" alt="" class="pb">
-            </div>
-        <hr>
+        </a>
+            <hr>
+        {% endfor %}
 
         
     
-</body>
-</html>
+{% endblock %}
