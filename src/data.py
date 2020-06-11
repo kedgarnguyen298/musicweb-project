@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 from controller import getID
 
-def crawlData ():
+def crawlChart ():
 # connect 
     url = "https://www.nhaccuatui.com/bai-hat/top-20.au-my.html"
     conn = urlopen(url)
@@ -87,9 +87,10 @@ def dataBaseSinger(singer):
 
     return list_recommend_info
 
-def getAllSong ():
+def getAllSong (url):
     # connect 
-    url = "https://www.nhaccuatui.com/bai-hat/pop-moi.2.html"
+    # url = "https://www.nhaccuatui.com/bai-hat/pop-moi.2.html"
+    url = url
     conn = urlopen(url)
     raw_data = conn.read()
     page_content = raw_data.decode("utf8")    
@@ -114,6 +115,8 @@ def getAllSong ():
         }
 
         list_song_info.append(song_info)
+    
+    # print(list_song_info)
 
     return list_song_info
 

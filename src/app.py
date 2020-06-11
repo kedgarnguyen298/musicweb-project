@@ -1,15 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
-from data import crawlData, getAllSong
+from data import crawlChart, getAllSong
 from controller import formatName, getRecommendList
 from model.main import Song
-
-from mongoengine import *
-connect(db='musicweb-database',
-        username='admin',
-        password='admin',
-        )
 
 import pymongo
 
@@ -17,13 +11,16 @@ client = pymongo.MongoClient("mongodb+srv://admin:admin@cluster0-jzaci.mongodb.n
 db = client["musicweb-database"]
 cl = db.song
 
-list_song_info = getAllSong()
+list_song_info = []
+data = cl.find({})
+for item in data:
+    list_song_info.append(item)
 
+print("list song info: ", list_song_info)
 
 @app.route('/', methods=["GET", "POST"])
 @app.route('/home', methods=["GET", "POST"])
 def home():
-    print(list_song_info)
     if request.method == "POST":
         title = request.form['search']
         for song_info in list_song_info:
@@ -36,7 +33,7 @@ def home():
 
 @app.route('/charts', methods = ["GET", "POST"])
 def chart():
-    list_chart_info = crawlData()
+    list_chart_info = crawlChart()
     if request.method == "POST":
         title = request.form['search']
         for song_info in list_song_info:
@@ -58,7 +55,7 @@ def play(idSong):
 
     # singer = formatName(singer)
     # list_recommend_info = dataBaseSinger(singer)
-    list_chart_info = crawlData()
+    list_chart_info = crawlChart()
     if request.method == "POST":
         title = request.form['search']
         for song_info in list_song_info:
@@ -70,11 +67,14 @@ def play(idSong):
     recommendList = getRecommendList(list_chart_info)
     return render_template('running.html', idSong = idSong, recommendList=recommendList)
 
-@app.route('/update')
+@app.route('/update', methods = ["GET", "POST"])
 def insert_song():
-    list_song_info = getAllSong()
-    cl.insert(list_song_info)
-    return render_template("confirmUpdate.html", list_song_info=list_song_info)
+    if request.method == "POST":
+        url = request.form["url"]
+        data = getAllSong(url)
+        cl.insert_many(data)
+        return render_template("confirmUpdate.html", list_song_info=list_song_info)
+    return render_template("admin.html")
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)
